@@ -57,7 +57,7 @@ export const deleteBlog = async (req, res) => {
             where: { id: req.params.id }
         })
         res.json({
-            "message": "Registro actualizado con éxito"
+            "message": "Registro eliminado con éxito"
         })
     } catch (error) {
         res.json({ message: error.message })
