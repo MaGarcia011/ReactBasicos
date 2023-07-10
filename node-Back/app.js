@@ -16,9 +16,9 @@ try {
     console.log('Fallo al conectar');
 }
 
-app.get('/',(req,res) =>{
-    res.send('Hola')
-})
+// app.get('/',(req,res) =>{
+//      res.send('Hola')
+// })
 
 app.listen(8000 , ()=>{
     console.log('Server UP running in http://localhost:8000/')
