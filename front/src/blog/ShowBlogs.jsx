@@ -1,10 +1,10 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-const URL = "http://localhost:8000/blogs/";
 
 export const ShowBlogs = () => {
+  const URL = "http://localhost:8000/blogs/";
   const [blog, setBlog] = useState([]);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export const ShowBlogs = () => {
   };
 
   return (
-    <div className="container" style={{}}>
+    <div className="container">
       <h1 className="mb-4" style={{height: 70}}>App by: carlos and mike</h1>
       <div className="row">
         <div className="col">
@@ -52,7 +52,7 @@ export const ShowBlogs = () => {
                   <td>{item.content}</td>
                   <td>
                     <div className="d-flex" style={{ gap: 15 }}>
-                      <Link to={`/edit/${blog.id}`} className="btn btn-info">
+                      <Link to={`/edit/${item.id}`} className="btn btn-info">
                         Edit
                       </Link>
                       <button
